@@ -1,0 +1,96 @@
+
+<ion-header class="recipenav">
+
+  <ion-navbar>
+    <ion-title class="recipetitle"> Recipes </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  
+
+    <!-- <a href="../foodselection/foodselection.html"> -->
+
+
+      <ion-grid *ngIf="recipes">
+        <!-- <ion-row responsive-sm *ngFor="let recipe of recipes">
+          <ion-col width-50>
+              <div class="list customlist" >
+                  <div class="foodName">{{recipe.name}}</div>
+                  <img class="listimg" src="assets/icon/pizzai.png">
+                  <div class="foodTime">{{recipe.time}}</div>  
+              </div>
+          </ion-col>
+
+        </ion-row> -->
+
+        <ion-row *ngFor="let trio of getTriples()" >
+          <ion-col *ngFor="let item of trio" col-6>
+              <div class="listcustomlist" >
+                  <div class="foodName">{{item.name}}</div>
+                  <img class="listimg" src="assets/icon/pizzai.png">
+                  <div class="foodTime">{{item.time}}</div>
+              </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+<!-- 
+
+  <div class="list">
+    <div class="foodName">Pizza</div>
+      <img class="listimg" src="assets/icon/pizzai.png">
+       <div class="foodTime">30 mins</div>  
+    </div>
+         </button>  -->
+    <!-- </a> -->
+    <!-- <button class="listname"(click)="pushtaco()"> 
+    <!-- <a href="../foodselection/foodselection.html"> -->
+  <!-- <div class="list">
+    <div class="foodName">Taco</div>
+      <img class="listimg" src="assets/icon/tacoi.png">
+       <div class="foodTime">15 mins</div>  
+    </div>
+         </button>  --> 
+    <!-- </a> -->
+    <!-- <button class="listname"(click)="pushravioli()">  -->
+    <!-- <a href="../foodselection/foodselection.html"> -->
+  <!-- <div class="list">
+    <div class="foodName">Ravioli</div>
+      <img class="listimg" src="assets/icon/raviolii.png">
+       <div class="foodTime">20 mins</div>  
+    </div>
+         </button>  -->
+    <!-- </a> -->
+    <!-- <button class="listname"(click)="pushpie()">  -->
+    <!-- <a href="../foodselection/foodselection.html"> -->
+  <!-- <div class="list">
+    <div class="foodName">Apple Pie</div>
+      <img class="listimg" src="assets/icon/applepiei.png">
+       <div class="foodTime">40 mins</div>  
+    </div>
+         </button>  -->
+    <!-- </a> -->
+    <!-- <div class="list">
+      <img class="listimg" src="assets/icon/tacoi.png" height="40">
+      <button class="listname" ion-button color="secondary" (click)="pushtaco()">
+        Taco
+      </button>
+    </div>
+    
+    <div class="list">
+      <img class="listimg" src="assets/icon/raviolii.png" height="40">
+      <button class="listname" ion-button color="secondary" (click)="pushravioli()">
+        Ravioli
+      </button>
+    </div>
+
+    <div class="list">
+      <img class="listimg" src="assets/icon/applepiei.png" height="40">
+      <button class="listname" ion-button color="secondary" (click)="pushpie()">
+        Apple Pie
+      </button>
+    </div> -->
+
+</ion-content>
